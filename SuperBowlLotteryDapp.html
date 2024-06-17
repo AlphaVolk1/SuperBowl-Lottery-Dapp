@@ -1,0 +1,718 @@
+<!DOCTYPE html>   
+<html>
+<head>
+<title>SuperBowl Lottery Dapp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function amount_bet(value, list) { alert(value);
+  var amount_bet_value = document.getElementById(list);
+
+  //remove all list items
+  while (amount_bet_value.firstChild) {
+    amount_bet_value.removeChild(amount_bet_value.firstChild);
+  }
+
+  // add the new list item with the value of the selected radio button
+  var item = document.createElement("li");
+  item.appendChild(document.createTextNode(value + " " + "USDC Bet"));
+  amount_bet_value.appendChild(item);
+}
+
+function update_amount_bet(value) {
+  amount_bet(value, "list");
+}
+
+function updateList(value, listId) {
+  // get the list element
+  var list = document.getElementById(listId);
+
+  // remove all list items
+  while (list.firstChild) {
+    list.removeChild(list.firstChild);
+  }
+
+  // add the new list item with the value of the selected radio button
+  var item = document.createElement("label");
+  item.appendChild(document.createTextNode(value));
+  list.appendChild(item);
+}
+
+// update the list for the first pair of radio buttons
+function updateList1(value) {
+  updateList(value, "list1");
+}
+
+// update the list for the second pair of radio buttons
+function updateList2(value) {
+  updateList(value, "list2");
+}
+
+function updateList3(value) {
+  updateList(value, "list3");
+}
+
+function updateList4(value) {
+  updateList(value, "list4");
+}
+
+function updateList5(value) {
+  updateList(value, "list5");
+}
+
+function updateList6(value) {
+  updateList(value, "list6");
+}
+
+function updateList7(value) {
+  updateList(value, "list7");
+}
+
+function updateList8(value) {
+  updateList(value, "list8");
+}
+
+function updateList9(value) {
+  updateList(value, "list9");
+}
+
+function updateList10(value) {
+  updateList(value, "list10");
+}
+
+function updateList11(value) {
+  updateList(value, "list11");
+}
+
+function updateList12(value) {
+  updateList(value, "list12");
+}
+
+function updateList13(value) {
+  updateList(value, "list13");
+}
+
+function updateList14(value) {
+  updateList(value, "list14");
+}
+
+function updateList15(value) {
+  updateList(value, "list15");
+}
+
+function updateList16(value) {
+  updateList(value, "list16");
+}
+
+function updateList17(value) {
+  updateList(value, "list17");
+}
+
+/*function submitContract(){
+  alert("JJJ");
+  var x = document.getElementById("list").innerHTML;
+  alert(x);
+}*/
+</script>
+
+<script>
+  var x = document.getElementById("list").innerHTML;
+  alert(x); 
+  const pickLabel = document.querySelector('.pickLabel').innerHTML;
+  const betButton = document.querySelector('.betButton');
+
+  async function getBet() {
+   await  alert("we will get there");
+   /* const picks = await();
+    const pickList = picks[0];
+    picks.innerHTML = pickList;
+    alert(picks);*/
+  }
+
+  betButton.addEventListener('click', () => {
+    getBet();
+  });
+</script>
+
+<style>
+/*START OF VIEWPORT SIZING*/
+.example {
+  padding: 20px;
+  color: black;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {
+    background: red;
+    font-size:55%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: green;
+    font-size:60%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {
+    background: skyblue;
+    font-size:70%;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {
+    background: orange;
+    font-size:90%;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {
+    background: pink;
+    font-size:100%;
+  }
+}
+/*END OF VIEWPORT SIZING*/
+
+body{
+  background-color:gold;
+  color:black;
+}
+
+header{
+  text-align:center;
+  font-size:300%;
+  border: solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+h3{background-color:yellow;}
+
+#dailyGame{
+  color:black;
+  border:solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;  
+  width:98%;
+  font-size:95%;
+}
+
+table{
+  background-color:teal;
+  margin:5px 5px 5px 5px;
+  padding:5px 5px 5px 5px;
+  font-size: 200%;
+  text-align:center;
+  width:98%;
+}
+
+table th{
+  background-color: burlywood;
+}
+
+th{width: 50%;}
+
+tr td{
+  border:solid thin blue;
+  width: 50%;
+}
+
+input{cursor:pointer;}
+
+label{
+  color:black;
+  font-style:oblique;
+}
+
+table input{
+  border:solid thick black;
+}
+
+.sportSymbol{font-size:300%;}
+
+td{
+  cursor: pointer;
+}
+
+#pickBox{
+  color:black;
+  font-size: 250%;
+  padding: 5px 10px 5px 10px;
+  background-color:lightblue;
+  border:solid thick green;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#pickBox2{
+  color:black;
+  padding: 5px 10px 5px 10px;
+  background-color:lightblue;
+  border:solid thick green;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#pickBox3{
+  text-align: center;
+  color:black;
+  font-size:120%;
+  padding: 5px 10px 5px 10px;
+  background-color:lightblue;
+  border:solid thick green;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.teamPicks_amount_bet{
+  color:black;
+  text-align: center;
+  font-style:oblique;
+  font-size: 100%;
+  border: solid thick green;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+button{
+  background-color:lightblue; 
+  border:solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  cursor:pointer; 
+  margin:5px;
+  cursor:pointer;
+  position:relative;
+  font-size:120%;
+}
+
+.pickBTS{
+  background-color:lightblue; 
+  border:solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  cursor:pointer; 
+  margin:5px;
+  cursor:pointer;
+  position:relative;
+  font-size:90%;
+  width: 80%;
+}
+
+#dateTime{
+  margin: 15px 15px 5px 5px;
+  position: relative;
+  float: right;
+  font-size: 150%;
+  color:darkgreen;
+}
+
+.pickLabel{
+  border:solid thin green;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+footer{
+ font-size:225%;
+ font-style: bold;
+ color: yellow;
+}
+</style>
+</head>
+<body class="example">
+
+<header>
+  <h1> NFL </h1>
+  <h2> <strong> SuperBowl </strong> </h2>
+  <h3> SPORTS BETTING LOTTERY </h3>
+  <h6> PICK ALL THE WINNERS IN EACH CONTEST </h6>
+  <h6> &#127944; SHARE THE WINNERS POOL  &#127944; </h6>
+  <h3> &#128176; &#128178; &#128181; </h3>
+</header>
+
+<button id="loginButton" class="enableEthereumButton" onmouseover="style.color='red'" 
+onmouseout="style.color='royalblue'">CONNECT
+</button>
+
+<button>PLAYERS</button>
+<button>WINNERS</button>
+
+<label id="dateTime"><date>02-02-23</date></label>
+
+<div class="acctInfo">
+<label>Wallet:</label>
+<span class="showAccount"></span><br><br>
+<div id="ether-balance"></div><br>
+<div class="network">Network:</div>
+
+<br><br>
+<div>
+ <label>POOL OF PLAYERS AND VALUE IN USD</label><br><br>
+ <label>Players:</label><span class="showAccount">10000</span><br><br>
+ <label>Pool Value:</label><span class="showAccount">10000</span><br>
+</div><br><br>
+
+<!--METAMASK LOGIN AND WALLET CONNECTS-->
+<script>
+  window.userWalletAddress = null
+  const loginButton = document.getElementById('loginButton')
+  const userWallet = document.getElementById('userWallet')
+
+const ethereumButton = document.querySelector('.enableEthereumButton');
+const showAccount = document.querySelector('.showAccount');
+
+window.ethereum.enable().then(accounts => {
+    const account = accounts[0];
+
+    // Get the balance in wei
+    window.ethereum.send({method: 'eth_getBalance', params: [account, "latest"]}, (error, result) => {
+        if(!error) {
+            // The balance is returned in wei, so we need to convert it to ether
+            const balanceInWei = result.result;
+            const balanceInEther = balanceInWei / 10 ** 18;
+            document.getElementById("ether-balance").innerHTML = `Balance in Network-Coin: ${balanceInEther}`;
+        }
+    });
+});
+
+
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
+}
+
+
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+
+  function toggleButton() {
+    if (!window.ethereum) {
+      loginButton.innerText = 'CONNECT'
+      loginButton.classList.remove('bg-purple-500', 'text-white')
+      loginButton.classList.add('bg-gray-500', 'text-gray-100', 'cursor-not-allowed')
+      return false
+    }
+
+    loginButton.addEventListener('click', loginWithMetaMask)
+  }
+
+  async function loginWithMetaMask() {
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+      .catch((e) => {
+        console.error(e.message)
+        return
+      })
+    if (!accounts) { return }
+
+    window.userWalletAddress = accounts[0]
+    userWallet.innerText = window.userWalletAddress
+    loginButton.innerText = 'Sign out of MetaMask'
+
+    loginButton.removeEventListener('click', loginWithMetaMask)
+    setTimeout(() => {
+      loginButton.addEventListener('click', signOutOfMetaMask)
+    }, 200)
+  }
+
+  function signOutOfMetaMask() {
+    window.userWalletAddress = null
+    userWallet.innerText = ''
+    loginButton.innerText = 'Sign in with MetaMask'
+
+    loginButton.removeEventListener('click', signOutOfMetaMask)
+    setTimeout(() => {
+      loginButton.addEventListener('click', loginWithMetaMask)
+    }, 200)
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    toggleButton()
+  });
+</script>
+<!--END OF METAMASK CONNECTIONS-->
+<!--START OF THE TABLES/PICKS-->
+<div id="dailyGame" class="divScroll">
+<table>
+<!--AFC NFC-->
+<th>AFC</th> <th>NFC</th>
+<tr>
+ <td> <button class="pickBTS" onclick="updateList1(this.value);" type="radio" id="" 
+   name="g1" value="01">01.KC-1.5</button></td>
+ <td> <button class="pickBTS" onclick="updateList1(this.value);" type="radio" id="" 
+   name="g1" value="02">02.PHI+1.5</button></td>
+</tr>
+</table>
+
+<table>
+<!--OVER UNDER-->
+<th>OVER</th> <th>UND</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList2(this.value);" type="radio" id="" name="g2" value="03">03.OV49.5</button></td>
+ <td><button class="pickBTS"  onclick="updateList2(this.value);" type="radio" id="" name="g2" value="04">04.UN49.5</button></td>
+</tr>
+</table>
+
+<table>
+<!--1ST HALF WINNER-->  
+<th>1stHALF</th> <th>WINNER</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList3(this.value);" type="radio" id="" name="g3" value="05">05.KC-1.5</button></td>
+ <td><button class="pickBTS"  onclick="updateList3(this.value);" type="radio" id="" name="g3" value="06">06.PHI+1.5</button></td>
+</tr>
+</table>
+
+<table>
+<!--1ST HALF OVER UNDER-->
+<th>1stHALF</th> <th>O/U</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList4(this.value);" type="radio" id="" name="g4" value="07">07.OV 24.5</button></td>
+ <td><button class="pickBTS"  onclick="updateList4(this.value);" type="radio" id="" name="g4" value="08">08.UN 24.5</button></td>
+</tr>
+</table>
+
+<table>
+<!--2ND HALF WINNER-->
+<th>2ndHALF</th> <th>WINNER</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList5(this.value);" type="radio" id="" name="g5" value="09">09.KC-1.5</button></td>
+ <td><button class="pickBTS"  onclick="updateList5(this.value);" type="radio" id="" name="g5" value="10">10.PHI+1.5</button></td>
+</tr>
+</table>
+
+<table>
+<!--FIRST TO SCORE-->
+<th>FIRST TO</th> <th>SCORE</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList6(this.value);" type="radio" id="" name="g6" value="11">11.KC</button></td>
+ <td><button class="pickBTS"  onclick="updateList6(this.value);" type="radio" id="" name="g6" value="12">12.PHI</button></td>
+</tr>
+</table>
+
+<table>
+<!--LAST TO SCORE-->
+<th>LAST TO</th> <th>SCORE</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList7(this.value);" type="radio" id="" name="g7" value="13">13.KC</button></td>
+ <td><button class="pickBTS"  onclick="updateList7(this.value);" type="radio" id="" name="g7" value="14">14.PHI</button></td>
+</tr>
+</table>
+
+<table>
+<!--COIN FLIP-->
+<th>COIN</th> <th>FLIP</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList8(this.value);" type="radio" id="" name="g8" value="15">15.KC</button></td>
+ <td><button class="pickBTS"  onclick="updateList8(this.value);" type="radio" id="" name="g8" value="16">16.PHI</button></td>
+</tr>
+</table>
+
+<table>
+<!--MOST TURN OVERS GIVEN-->
+<th>MOST TURN</th> <th>OVERS</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList9(this.value);" type="radio" id="" name="g9" value="17">17.KC</button></td>
+ <td><button class="pickBTS"  onclick="updateList9(this.value);" type="radio" id="" name="g9" value="18">18.PHI</button></td>
+</tr>
+</table>
+
+<table>
+<!--MOST YRDS RUN RECEIVING-->
+<th>MOST YRDS</th> <th>RECEIVING</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList10(this.value);" type="radio" id="" name="g10" value="19">19.T KELCE</button></td>
+ <td><button class="pickBTS"  onclick="updateList10(this.value);" type="radio" id="" name="g10" value="20">20.AJ BROW</button></td>
+</tr>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList10(this.value);" type="radio" id="" name="g10" value="21">21.D SMITH</button></td>
+ <td><button class="pickBTS"  onclick="updateList10(this.value);" type="radio" id="" name="g10" value="22">22.D GOED</button></td>
+</tr>
+</table>
+
+<table>
+<!--MOST YRDS PASS COMP-->
+<th>MOST YRDS</th> <th>PASS COMP</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList11(this.value);" type="radio" id="" name="g11" value="23">23.J HUR</button></td>
+ <td><button class="pickBTS"  onclick="updateList11(this.value);" type="radio" id="" name="g11" value="24">24.P MAHO</button></td>
+</tr>
+</table>
+
+<table>
+<!--FIELD GOAL OVER UNDER MADE-->
+<th>FIELD GOAL</th> <th>TOTAL O/U</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList12(this.value);" type="radio" id="" name="g12" value="25">25.OV7.5</button></td>
+ <td><button class="pickBTS"  onclick="updateList12(this.value);" type="radio" id="" name="g12" value="26">26.UN7.5</button></td>
+</tr>
+</table>
+
+<table>
+<!--MOST SACKS MADE BY PLAYER-->
+<th>MOST SACKS</th> <th>BY PLAYER</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList13(this.value);" type="radio" id="" name="g13" value="27">27.C JONES</button></td>
+ <td><button class="pickBTS"  onclick="updateList13(this.value);" type="radio" id="" name="g13" value="28">28.H REDD</button></td>
+</tr>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList13(this.value);" type="radio" id="" name="g13" value="29">29.F CLARK</button></td>
+ <td><button class="pickBTS"  onclick="updateList13(this.value);" type="radio" id="" name="g13" value="30">30.J SWEAT</button></td>
+</tr>
+</table>
+
+<table>
+<!--MOST FLAGS BY TEAM-->
+<th>MOST FLAGS</th> <th>BY TEAM</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList14(this.value);" type="radio" id="" name="g14" value="31">31.KC</button></td>
+ <td><button class="pickBTS"  onclick="updateList14(this.value);" type="radio" id="" name="g14" value="32">32.PHI</button></td>
+</tr>
+</table>
+
+<table>
+<!--MOST INT BY PLAYER-->
+<th>MOST CAUGHT</th> <th>INT BY PLAYER</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList15(this.value);" type="radio" id="" name="g15" value="33">33.J BRADB</button></td>
+ <td><button class="pickBTS"  onclick="updateList15(this.value);" type="radio" id="" name="g15" value="34">34.CJ GAR</button></td>
+</tr>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList15(this.value);" type="radio" id="" name="g15" value="35">35.D SLAY</button></td>
+ <td><button class="pickBTS"  onclick="updateList15(this.value);" type="radio" id="" name="g15" value="36">36.J REID</button></td>
+</tr>
+</table>
+
+<table>
+<!--MVP PLAYER-->
+<th>MVP</th> <th>PLAYER</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList16(this.value);" type="radio" id="" name="g16" value="37">37.J HURT</button></td>
+ <td><button class="pickBTS"  onclick="updateList16(this.value);" type="radio" id="" name="g16" value="38">38.P MAHO</button></td>
+</tr>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList16(this.value);" type="radio" id="" name="g16" value="39">39.T.KELCE</button></td>
+ <td><button class="pickBTS"  onclick="updateList16(this.value);" type="radio" id="" name="g16" value="40">40.AJ BROW</button></td>
+</tr>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList16(this.value);" type="radio" id="" name="g16" value="41">41.D SMITH</button></td>
+ <td><button class="pickBTS"  onclick="updateList16(this.value);" type="radio" id="" name="g16" value="42">42.H REDD</button></td>
+</tr>
+</table>
+
+<table>
+<!--OVER TIME-->
+<th>OVER</th> <th>TIME</th>
+<tr>
+ <td><button class="pickBTS"  onclick="updateList17(this.value);" type="radio" id="" name="g17" value="43">43.YES</button></td>
+ <td><button class="pickBTS" onclick="updateList17(this.value);" type="radio" id="" name="g17" value="44">44.NO</button></td>
+</tr>
+</table>
+
+</div>
+
+<!--AMOUNT TO BE BET-->
+<div class="teamPicks_amount_bet" id="teams_amounts"> 
+  <strong>
+  Amount Bet:  
+       <input onclick="update_amount_bet(this.value);" 
+         name="amounts" type="radio"id="amoutn1" value="1">
+       <lable>1</lable>
+        
+       <input onclick="update_amount_bet(this.value);"
+         name="amounts" type="radio"id="amoutn5" value="5">
+       <lable>5</lable>
+        
+       <input onclick="update_amount_bet(this.value);" 
+         name="amounts" type="radio"id="amount10" value="10"> 
+       <lable>10</lable> 
+        
+       <input onclick="update_amount_bet(this.value);" 
+         name="amounts" type="radio"id="amount20" value="20">
+       <lable>20</lable>  
+        
+       <input onclick="update_amount_bet(this.value);"
+         name="amounts" type="radio"id="amoutn25" value="25">
+       <lable>25</lable>
+        
+       <input onclick="update_amount_bet(this.value);"
+         name="amounts" type="radio"id="amount50" value="50">
+       <lable>50</lable>   
+        
+       <input onclick="update_amount_bet(this.value);" 
+         name="amounts" type="radio"id="amoutn100" value="100">
+       <lable>100</lable> 
+  </strong>
+</div> 
+
+<div id="pickBox"><br>
+<ul id="list"></ul>
+
+<!--END OF GROUP OF PICKS-->
+<form>
+<button class="betButton" id="submitButton">SUBMIT</button>
+
+<label>PICKS</label>
+
+<div id="pickBox3">
+<h6>MUST CHOOSE ONE PICK FROM EACH CONTEST - ALL PICKS MUST WIN - THE PLAYERS IN THE POOL WITH THE MOST WINS TAKE THE POOL IN PROPORTION TO THEIR BET</h6>
+
+<span class="pickLabel" id="list1"> &nbsp;</span> &nbsp;
+<span class="pickLabel" id="list2"> &nbsp;</span> &nbsp;
+
+<span class="pickLabel" id="list3"> &nbsp;</span> &nbsp;
+<span class="pickLabel" id="list4"> &nbsp;</span> &nbsp;
+
+<span class="pickLabel" id="list5"> &nbsp;</span> &nbsp;
+<span class="pickLabel" id="list6"> &nbsp;</span> &nbsp;
+
+<span class="pickLabel" id="list7"> &nbsp;</span> &nbsp;
+<span class="pickLabel" id="list8"> &nbsp;</span> &nbsp;
+
+<span class="pickLabel" id="list9"> &nbsp;</span> &nbsp;
+<span class="pickLabel" id="list10"> &nbsp;</span> &nbsp;
+
+<span class="pickLabel" id="list11"> &nbsp;</span> &nbsp;
+<span class="pickLabel" id="list12"> &nbsp;</span> &nbsp;
+
+<span class="pickLabel" id="list13"> &nbsp;</span> &nbsp;
+<span class="pickLabel" id="list14"> &nbsp;</span> &nbsp;
+
+<span class="pickLabel" id="list15"> &nbsp;</span> &nbsp;
+<span class="pickLabel" id="list16"> &nbsp;</span> &nbsp;
+
+<span class="pickLabel" id="list17"> &nbsp;</span> &nbsp;
+</div><br><br>
+</form>
+</div>
+
+<footer>The Big BankRoll Sports Lottery @t.me/TELEGRAM_CHANNEL</footer>
+</body>
+</html>
